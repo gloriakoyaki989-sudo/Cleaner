@@ -1,0 +1,378 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Community Impact - CleanCommunity</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <div class="header-content">
+            <a href="index.html" class="logo">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 6h18"></path><path d="M19 6v14c0 1-1 2-2 2H7c-1 0-2-1-2-2V6"></path><path d="M8 6V4c0-1 1-2 2-2h4c1 0 2 1 2 2v2"></path><line x1="10" y1="11" x2="10" y2="17"></line><line x1="14" y1="11" x2="14" y2="17"></line></svg>
+                <span>CleanCommunity</span>
+            </a>
+
+            <nav class="nav-desktop">
+                <a href="index.html" class="nav-link">Home</a>
+                <a href="schedule.html" class="nav-link">Schedule</a>
+                <a href="recycling-guide.html" class="nav-link">Recycling Guide</a>
+                <a href="report.html" class="nav-link">Report Issue</a>
+                <a href="community.html" class="nav-link active">Community</a>
+            </nav>
+
+            <button class="mobile-menu-btn" onclick="toggleMobileMenu()">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="3" y1="12" x2="21" y2="12"></line><line x1="3" y1="6" x2="21" y2="6"></line><line x1="3" y1="18" x2="21" y2="18"></line></svg>
+            </button>
+        </div>
+
+        <nav id="mobile-menu" class="nav-mobile hidden">
+            <a href="index.html" class="nav-link">Home</a>
+            <a href="schedule.html" class="nav-link">Schedule</a>
+            <a href="recycling-guide.html" class="nav-link">Recycling Guide</a>
+            <a href="report.html" class="nav-link">Report Issue</a>
+            <a href="community.html" class="nav-link active">Community</a>
+        </nav>
+    </header>
+
+    <!-- Page Header -->
+    <section class="page-header page-header-purple">
+        <div class="container">
+            <div class="page-header-title">
+                <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path><circle cx="9" cy="7" r="4"></circle><path d="M23 21v-2a4 4 0 0 0-3-3.87"></path><path d="M16 3.13a4 4 0 0 1 0 7.75"></path></svg>
+                <h1>Community Impact</h1>
+            </div>
+            <p>See how your neighborhood is making a difference together</p>
+        </div>
+    </section>
+
+    <!-- Main Content -->
+    <section class="section">
+        <div class="container">
+            <!-- Overall Stats -->
+            <div class="grid grid-4 mb-12">
+                <div class="card text-center">
+                    <div style="width: 3rem; height: 3rem; background-color: #d1fae5; border-radius: 50%; display: flex; align-items: center; justify-content: center; margin: 0 auto 0.75rem;">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="color: #16a34a;"><path d="M3 6h18"></path><path d="M19 6v14c0 1-1 2-2 2H7c-1 0-2-1-2-2V6"></path><path d="M8 6V4c0-1 1-2 2-2h4c1 0 2 1 2 2v2"></path><line x1="10" y1="11" x2="10" y2="17"></line><line x1="14" y1="11" x2="14" y2="17"></line></svg>
+                    </div>
+                    <div class="text-3xl mb-1">1,247</div>
+                    <div class="text-sm text-gray-600">Tons Recycled</div>
+                    <div class="text-xs text-green-600 mt-1">↑ 12% this month</div>
+                </div>
+
+                <div class="card text-center">
+                    <div style="width: 3rem; height: 3rem; background-color: #dbeafe; border-radius: 50%; display: flex; align-items: center; justify-content: center; margin: 0 auto 0.75rem;">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="color: #2563eb;"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path><circle cx="9" cy="7" r="4"></circle><path d="M23 21v-2a4 4 0 0 0-3-3.87"></path><path d="M16 3.13a4 4 0 0 1 0 7.75"></path></svg>
+                    </div>
+                    <div class="text-3xl mb-1">3,450</div>
+                    <div class="text-sm text-gray-600">Active Members</div>
+                    <div class="text-xs text-blue-600 mt-1">↑ 8% this month</div>
+                </div>
+
+                <div class="card text-center">
+                    <div style="width: 3rem; height: 3rem; background-color: #e9d5ff; border-radius: 50%; display: flex; align-items: center; justify-content: center; margin: 0 auto 0.75rem;">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="color: #9333ea;"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"></polyline></svg>
+                    </div>
+                    <div class="text-3xl mb-1">892</div>
+                    <div class="text-sm text-gray-600">Issues Resolved</div>
+                    <div class="text-xs" style="color: #9333ea; margin-top: 0.25rem;">↑ 15% this month</div>
+                </div>
+
+                <div class="card text-center">
+                    <div style="width: 3rem; height: 3rem; background-color: #d1fae5; border-radius: 50%; display: flex; align-items: center; justify-content: center; margin: 0 auto 0.75rem;">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="color: #10b981;"><path d="M11 20A7 7 0 0 1 9.8 6.1C15.5 5 17 4.48 19 2c1 2 2 4.18 2 8 0 5.5-4.78 10-10 10Z"></path><path d="M2 21c0-3 1.85-5.36 5.08-6C9.5 14.52 12 13 13 12"></path></svg>
+                    </div>
+                    <div class="text-3xl mb-1">2.1T</div>
+                    <div class="text-sm text-gray-600">CO₂ Saved</div>
+                    <div class="text-xs" style="color: #10b981; margin-top: 0.25rem;">This year</div>
+                </div>
+            </div>
+
+            <!-- Neighborhood Leaderboard -->
+            <div class="card mb-12">
+                <h2 class="mb-6">Neighborhood Leaderboard</h2>
+                <div style="display: grid; gap: 1rem;">
+                    <div style="display: flex; align-items: center; gap: 1rem; padding: 1rem; border-radius: 0.5rem; background-color: #f9fafb;">
+                        <div style="width: 3rem; height: 3rem; background-color: #fef3c7; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 1.25rem;">
+                            🥇
+                        </div>
+                        <div style="flex: 1;">
+                            <div class="flex items-center justify-between mb-2">
+                                <div>Gudele</div>
+                                <div class="text-sm text-gray-600">842 members</div>
+                            </div>
+                            <div class="progress-bar">
+                                <div class="progress-track">
+                                    <div class="progress-fill" style="width: 78%;"></div>
+                                </div>
+                                <div class="text-sm">78%</div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div style="display: flex; align-items: center; gap: 1rem; padding: 1rem; border-radius: 0.5rem; background-color: #f9fafb;">
+                        <div style="width: 3rem; height: 3rem; background-color: #e5e7eb; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 1.25rem;">
+                            🥈
+                        </div>
+                        <div style="flex: 1;">
+                            <div class="flex items-center justify-between mb-2">
+                                <div>Riverside</div>
+                                <div class="text-sm text-gray-600">721 members</div>
+                            </div>
+                            <div class="progress-bar">
+                                <div class="progress-track">
+                                    <div class="progress-fill" style="width: 74%;"></div>
+                                </div>
+                                <div class="text-sm">74%</div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div style="display: flex; align-items: center; gap: 1rem; padding: 1rem; border-radius: 0.5rem; background-color: #f9fafb;">
+                        <div style="width: 3rem; height: 3rem; background-color: #fed7aa; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 1.25rem;">
+                            🥉
+                        </div>
+                        <div style="flex: 1;">
+                            <div class="flex items-center justify-between mb-2">
+                                <div>Hai Refrendam</div>
+                                <div class="text-sm text-gray-600">656 members</div>
+                            </div>
+                            <div class="progress-bar">
+                                <div class="progress-track">
+                                    <div class="progress-fill" style="width: 69%;"></div>
+                                </div>
+                                <div class="text-sm">69%</div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div style="display: flex; align-items: center; gap: 1rem; padding: 1rem; border-radius: 0.5rem; background-color: #f9fafb;">
+                        <div style="width: 3rem; height: 3rem; background-color: #f3f4f6; border-radius: 50%; display: flex; align-items: center; justify-content: center;">
+                            4
+                        </div>
+                        <div style="flex: 1;">
+                            <div class="flex items-center justify-between mb-2">
+                                <div>Hai Malakia</div>
+                                <div class="text-sm text-gray-600">589 members</div>
+                            </div>
+                            <div class="progress-bar">
+                                <div class="progress-track">
+                                    <div class="progress-fill" style="width: 65%;"></div>
+                                </div>
+                                <div class="text-sm">65%</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Two Column Layout -->
+            <div class="grid grid-2 gap-8">
+                <!-- Top Contributors -->
+                <div class="card">
+                    <h2 class="mb-6">Top Contributors</h2>
+                    <div style="display: grid; gap: 0.75rem;">
+                        <div style="display: flex; align-items: center; gap: 1rem; padding: 0.75rem; border-radius: 0.5rem; transition: background-color 0.2s;" onmouseover="this.style.backgroundColor='#f9fafb'" onmouseout="this.style.backgroundColor='transparent'">
+                            <div style="width: 2.5rem; height: 2.5rem; background-color: #e9d5ff; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 0.875rem;">1</div>
+                            <div style="flex: 1;">
+                                <div class="mb-1">Sarah Mitchell</div>
+                                <div class="text-sm text-gray-600">Juba 1(J1) • 24 reports</div>
+                            </div>
+                            <div style="display: flex; gap: 0.25rem;">
+                                <div style="width: 1.5rem; height: 1.5rem; background-color: #fef3c7; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 0.75rem;">⭐</div>
+                                <div style="width: 1.5rem; height: 1.5rem; background-color: #fef3c7; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 0.75rem;">⭐</div>
+                                <div style="width: 1.5rem; height: 1.5rem; background-color: #fef3c7; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 0.75rem;">⭐</div>
+                                <div style="width: 1.5rem; height: 1.5rem; background-color: #fef3c7; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 0.75rem;">⭐</div>
+                                <div style="width: 1.5rem; height: 1.5rem; background-color: #fef3c7; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 0.75rem;">⭐</div>
+                            </div>
+                        </div>
+
+                        <div style="display: flex; align-items: center; gap: 1rem; padding: 0.75rem; border-radius: 0.5rem; transition: background-color 0.2s;" onmouseover="this.style.backgroundColor='#f9fafb'" onmouseout="this.style.backgroundColor='transparent'">
+                            <div style="width: 2.5rem; height: 2.5rem; background-color: #e9d5ff; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 0.875rem;">2</div>
+                            <div style="flex: 1;">
+                                <div class="mb-1">James Chen</div>
+                                <div class="text-sm text-gray-600">Riverside • 21 reports</div>
+                            </div>
+                            <div style="display: flex; gap: 0.25rem;">
+                                <div style="width: 1.5rem; height: 1.5rem; background-color: #fef3c7; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 0.75rem;">⭐</div>
+                                <div style="width: 1.5rem; height: 1.5rem; background-color: #fef3c7; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 0.75rem;">⭐</div>
+                                <div style="width: 1.5rem; height: 1.5rem; background-color: #fef3c7; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 0.75rem;">⭐</div>
+                                <div style="width: 1.5rem; height: 1.5rem; background-color: #fef3c7; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 0.75rem;">⭐</div>
+                            </div>
+                        </div>
+
+                        <div style="display: flex; align-items: center; gap: 1rem; padding: 0.75rem; border-radius: 0.5rem; transition: background-color 0.2s;" onmouseover="this.style.backgroundColor='#f9fafb'" onmouseout="this.style.backgroundColor='transparent'">
+                            <div style="width: 2.5rem; height: 2.5rem; background-color: #e9d5ff; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 0.875rem;">3</div>
+                            <div style="flex: 1;">
+                                <div class="mb-1">Maria Garcia</div>
+                                <div class="text-sm text-gray-600">Maga Ten • 19 reports</div>
+                            </div>
+                            <div style="display: flex; gap: 0.25rem;">
+                                <div style="width: 1.5rem; height: 1.5rem; background-color: #fef3c7; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 0.75rem;">⭐</div>
+                                <div style="width: 1.5rem; height: 1.5rem; background-color: #fef3c7; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 0.75rem;">⭐</div>
+                                <div style="width: 1.5rem; height: 1.5rem; background-color: #fef3c7; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 0.75rem;">⭐</div>
+                                <div style="width: 1.5rem; height: 1.5rem; background-color: #fef3c7; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 0.75rem;">⭐</div>
+                            </div>
+                        </div>
+
+                        <div style="display: flex; align-items: center; gap: 1rem; padding: 0.75rem; border-radius: 0.5rem; transition: background-color 0.2s;" onmouseover="this.style.backgroundColor='#f9fafb'" onmouseout="this.style.backgroundColor='transparent'">
+                            <div style="width: 2.5rem; height: 2.5rem; background-color: #e9d5ff; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 0.875rem;">4</div>
+                            <div style="flex: 1;">
+                                <div class="mb-1">David Kim</div>
+                                <div class="text-sm text-gray-600">Nyakuron • 17 reports</div>
+                            </div>
+                            <div style="display: flex; gap: 0.25rem;">
+                                <div style="width: 1.5rem; height: 1.5rem; background-color: #fef3c7; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 0.75rem;">⭐</div>
+                                <div style="width: 1.5rem; height: 1.5rem; background-color: #fef3c7; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 0.75rem;">⭐</div>
+                                <div style="width: 1.5rem; height: 1.5rem; background-color: #fef3c7; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 0.75rem;">⭐</div>
+                            </div>
+                        </div>
+
+                        <div style="display: flex; align-items: center; gap: 1rem; padding: 0.75rem; border-radius: 0.5rem; transition: background-color 0.2s;" onmouseover="this.style.backgroundColor='#f9fafb'" onmouseout="this.style.backgroundColor='transparent'">
+                            <div style="width: 2.5rem; height: 2.5rem; background-color: #e9d5ff; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 0.875rem;">5</div>
+                            <div style="flex: 1;">
+                                <div class="mb-1">Emily Johnson</div>
+                                <div class="text-sm text-gray-600">Hai Jalaba• 15 reports</div>
+                            </div>
+                            <div style="display: flex; gap: 0.25rem;">
+                                <div style="width: 1.5rem; height: 1.5rem; background-color: #fef3c7; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 0.75rem;">⭐</div>
+                                <div style="width: 1.5rem; height: 1.5rem; background-color: #fef3c7; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 0.75rem;">⭐</div>
+                                <div style="width: 1.5rem; height: 1.5rem; background-color: #fef3c7; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 0.75rem;">⭐</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Upcoming Events and Badges -->
+                <div>
+                    <!-- Upcoming Events -->
+                    <div class="card mb-6">
+                        <h3 class="mb-4">Upcoming Events</h3>
+                        <div style="display: grid; gap: 1rem;">
+                            <div style="border-bottom: 1px solid #f3f4f6; padding-bottom: 1rem;">
+                                <div class="mb-2"> Cleanup Day</div>
+                                <div class="text-sm text-gray-600 mb-2">
+                                    <div class="mb-1">📅 Saturday, April 1</div>
+                                    <div class="mb-1">📍 Riverside</div>
+                                    <div>👥 45 signed up</div>
+                                </div>
+                                <button class="btn-primary" style="width: 100%; background-color: #9333ea; justify-content: center; padding: 0.5rem;">Join Event</button>
+                            </div>
+
+                            <div style="border-bottom: 1px solid #f3f4f6; padding-bottom: 1rem;">
+                                <div class="mb-2">Recycling Workshop</div>
+                                <div class="text-sm text-gray-600 mb-2">
+                                    <div class="mb-1">📅 Sunday, April 9</div>
+                                    <div class="mb-1">📍 Juba Stem Center</div>
+                                    <div>👥 32 signed up</div>
+                                </div>
+                                <button class="btn-primary" style="width: 100%; background-color: #9333ea; justify-content: center; padding: 0.5rem;">Join Event</button>
+                            </div>
+
+                            <div>
+                                <div class="mb-2">E-Waste Collection Event</div>
+                                <div class="text-sm text-gray-600 mb-2">
+                                    <div class="mb-1">📅 Saturday, April 15</div>
+                                    <div class="mb-1">📍 Freedom Hall</div>
+                                    <div>👥 28 signed up</div>
+                                </div>
+                                <button class="btn-primary" style="width: 100%; background-color: #9333ea; justify-content: center; padding: 0.5rem;">Join Event</button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Badges -->
+                    <div class="card">
+                        <h3 class="mb-4">Achievement Badges</h3>
+                        <div style="display: grid; gap: 0.75rem;">
+                            <div style="display: flex; align-items: start; gap: 0.75rem; padding: 0.75rem; border-radius: 0.5rem; background-color: #f9fafb;">
+                                <div style="font-size: 2rem;">🏁</div>
+                                <div>
+                                    <div class="text-sm mb-1">First Report</div>
+                                    <div class="text-xs text-gray-600">Submitted your first report</div>
+                                </div>
+                            </div>
+
+                            <div style="display: flex; align-items: start; gap: 0.75rem; padding: 0.75rem; border-radius: 0.5rem; background-color: #f9fafb;">
+                                <div style="font-size: 2rem;">🔥</div>
+                                <div>
+                                    <div class="text-sm mb-1">Clean Streak</div>
+                                    <div class="text-xs text-gray-600">10 consecutive weeks active</div>
+                                </div>
+                            </div>
+
+                            <div style="display: flex; align-items: start; gap: 0.75rem; padding: 0.75rem; border-radius: 0.5rem; background-color: #f9fafb;">
+                                <div style="font-size: 2rem;">♻️</div>
+                                <div>
+                                    <div class="text-sm mb-1">Recycling Champion</div>
+                                    <div class="text-xs text-gray-600">50+ items properly recycled</div>
+                                </div>
+                            </div>
+
+                            <div style="display: flex; align-items: start; gap: 0.75rem; padding: 0.75rem; border-radius: 0.5rem; background-color: #f9fafb;">
+                                <div style="font-size: 2rem;">⭐</div>
+                                <div>
+                                    <div class="text-sm mb-1">Community Leader</div>
+                                    <div class="text-xs text-gray-600">Helped 100+ neighbors</div>
+                                </div>
+                            </div>
+
+                            <div style="display: flex; align-items: start; gap: 0.75rem; padding: 0.75rem; border-radius: 0.5rem; background-color: #f9fafb;">
+                                <div style="font-size: 2rem;">🌿</div>
+                                <div>
+                                    <div class="text-sm mb-1">Green Guardian</div>
+                                    <div class="text-xs text-gray-600">1 year of active participation</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="footer-grid">
+                <div>
+                    <div class="footer-logo">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 6h18"></path><path d="M19 6v14c0 1-1 2-2 2H7c-1 0-2-1-2-2V6"></path><path d="M8 6V4c0-1 1-2 2-2h4c1 0 2 1 2 2v2"></path><line x1="10" y1="11" x2="10" y2="17"></line><line x1="14" y1="11" x2="14" y2="17"></line></svg>
+                        <span>CleanCommunity</span>
+                    </div>
+                    <p>Working together to create cleaner, greener neighborhoods through better waste management and recycling.</p>
+                </div>
+                <div>
+                    <h3>Quick Links</h3>
+                    <ul>
+                        <li><a href="schedule.html">Collection Schedule</a></li>
+                        <li><a href="recycling-guide.html">Recycling Guide</a></li>
+                        <li><a href="report.html">Report an Issue</a></li>
+                        <li><a href="community.html">Community Impact</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h3>Contact</h3>
+                    <p>
+                        Email: info@cleancommunity.org<br>
+                        Phone: (+211) 911-111-111<br>
+                        Emergency: (+211) 911-WASTE
+                    </p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                © 2026 CleanCommunity. Making neighborhoods cleaner, one bin at a time.
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        function toggleMobileMenu() {
+            const mobileMenu = document.getElementById('mobile-menu');
+            mobileMenu.classList.toggle('hidden');
+        }
+    </script>
+</body>
+</html>

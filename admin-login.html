@@ -1,0 +1,358 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Login - CleanCommunity</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        .login-container {
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: linear-gradient(135deg, #16a34a 0%, #166534 100%);
+            padding: 2rem;
+        }
+
+        .login-box {
+            background: white;
+            border-radius: 1rem;
+            box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1);
+            padding: 3rem;
+            width: 100%;
+            max-width: 450px;
+        }
+
+        .login-header {
+            text-align: center;
+            margin-bottom: 2rem;
+        }
+
+        .login-logo {
+            width: 4rem;
+            height: 4rem;
+            background-color: #d1fae5;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 1px auto 1rem;
+            
+        }
+
+        .login-logo svg {
+            width: 2rem;
+            height: 2rem;
+            color: #16a34a;
+        }
+
+        .login-title {
+            font-size: 1.875rem;
+            margin-bottom: 0.5rem;
+            color: #1f2937;
+        }
+
+        .login-subtitle {
+            color: #6b7280;
+        }
+
+        .form-group {
+            margin-bottom: 1.5rem;
+        }
+
+        .form-label {
+            display: block;
+            margin-bottom: 0.5rem;
+            font-weight: 500;
+            color: #374151;
+            
+        }
+
+        .form-input {
+            width: 100%;
+            padding: 0.75rem 1rem;
+            border: 2px solid #e5e7eb;
+            border-radius: 0.5rem;
+            font-size: 1rem;
+            transition: all 0.2s;
+        }
+
+        .form-input:focus {
+            outline: none;
+            border-color: #16a34a;
+            box-shadow: 0 0 0 3px rgba(22, 163, 74, 0.1);
+        }
+
+        .input-icon {
+           
+        }
+
+        .input-icon svg {
+            position: absolute;
+            left: 1rem;
+            top: 50%;
+            transform: translateY(-50%);
+            color: #9ca3af;
+            width: 1.25rem;
+            height: 1.25rem;
+        }
+
+        .input-icon  {
+            padding-left: 0px 0px 3px 0;
+            margin: 0px;
+            text-align: left;
+        }
+
+        .remember-forgot {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            margin-bottom: 1.5rem;
+        }
+
+        .checkbox-label {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            cursor: pointer;
+            user-select: none;
+        }
+
+        .checkbox-label input[type="checkbox"] {
+            width: 1.125rem;
+            height: 1.125rem;
+            cursor: pointer;
+        }
+
+        .forgot-link {
+            color: #16a34a;
+            text-decoration: none;
+            font-size: 0.875rem;
+        }
+
+        .forgot-link:hover {
+            text-decoration: underline;
+        }
+
+        .btn-login {
+            width: 100%;
+            padding: 0.875rem;
+            background-color: #16a34a;
+            color: white;
+            border: none;
+            border-radius: 0.5rem;
+            font-size: 1rem;
+            font-weight: 600;
+            cursor: pointer;
+            transition: background-color 0.2s;
+        }
+
+        .btn-login:hover {
+            background-color: #15803d;
+        }
+
+        .btn-login:active {
+            transform: scale(0.98);
+        }
+
+        .alert {
+            padding: 1rem;
+            border-radius: 0.5rem;
+            margin-bottom: 1.5rem;
+            display: none;
+        }
+
+        .alert.show {
+            display: block;
+        }
+
+        .alert-error {
+            background-color: #fef2f2;
+            border: 1px solid #fca5a5;
+            color: #991b1b;
+        }
+
+        .alert-success {
+            background-color: #d1fae5;
+            border: 1px solid #86efac;
+            color: #166534;
+        }
+
+        .demo-credentials {
+            margin-top: 1.5rem;
+            padding: 1rem;
+            background-color: #f9fafb;
+            border-radius: 0.5rem;
+            border: 1px solid #e5e7eb;
+        }
+
+        .demo-credentials h4 {
+            margin-bottom: 0.5rem;
+            font-size: 0.875rem;
+            color: #6b7280;
+        }
+
+        .demo-credentials p {
+            font-size: 0.875rem;
+            margin: 0.25rem 0;
+            color: #374151;
+        }
+
+        .demo-credentials code {
+            background-color: #e5e7eb;
+            padding: 0.125rem 0.375rem;
+            border-radius: 0.25rem;
+            font-family: monospace;
+        }
+
+        .back-home {
+            text-align: center;
+            margin-top: 1.5rem;
+        }
+
+        .back-home a {
+            color: #16a34a;
+            text-decoration: none;
+            font-size: 0.875rem;
+        }
+
+        .back-home a:hover {
+            text-decoration: underline;
+            
+        }
+        
+    </style>
+</head>
+<body>
+    <div class="login-container">
+        <div class="login-box">
+            <div class="login-header">
+                <div class="login-logo">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <rect x="3" y="11" width="18" height="11" rx="2" ry="2"></rect>
+                        <path d="M7 11V7a5 5 0 0 1 10 0v4"></path>
+                    </svg>
+                </div>
+                <h1 class="login-title">Admin Login</h1>
+                <p class="login-subtitle">Access the CleanCommunity dashboard</p>
+            </div>
+
+            <div id="alertBox" class="alert"></div>
+
+            <form id="loginForm" onsubmit="handleLogin(event)">
+                <div class="form-group">
+                    <label for="username" class="form-label">Username</label>
+                    <div class="input-icon">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path>
+                            <circle cx="12" cy="7" r="4"></circle>
+                        </svg>
+                        <input 
+                            type="text" 
+                            id="username" 
+                            name="username" 
+                            class="form-input" 
+                            placeholder="Enter your username"
+                            required
+                        >
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label for="password" class="form-label">Password</label>
+                    <div class="input-icon">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <rect x="3" y="11" width="18" height="11" rx="2" ry="2"></rect>
+                            <path d="M7 11V7a5 5 0 0 1 10 0v4"></path>
+                        </svg>
+                        <input 
+                            type="password" 
+                            id="password" 
+                            name="password" 
+                            class="form-input" 
+                            placeholder="Enter your password"
+                            required
+                        >
+                    </div>
+                </div>
+
+                <div class="remember-forgot">
+                    <label class="checkbox-label">
+                        <input type="checkbox" id="remember" name="remember">
+                        <span>Remember me</span>
+                    </label>
+                    <a href="#" class="forgot-link">Forgot password?</a>
+                </div>
+
+                <button type="submit" class="btn-login">Sign In</button>
+            </form>
+
+          
+
+            <div class="back-home">
+                <a href="index.html">← Back to Website</a>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // Demo admin credentials
+        const ADMIN_CREDENTIALS = {
+            username: 'admin',
+            password: 'admin123'
+        };
+
+        function showAlert(message, type) {
+            const alertBox = document.getElementById('alertBox');
+            alertBox.textContent = message;
+            alertBox.className = `alert ${type === 'error' ? 'alert-error' : 'alert-success'} show`;
+            
+            setTimeout(() => {
+                alertBox.classList.remove('show');
+            }, 5000);
+        }
+
+        function handleLogin(event) {
+            event.preventDefault();
+            
+            const username = document.getElementById('username').value;
+            const password = document.getElementById('password').value;
+            const remember = document.getElementById('remember').checked;
+
+            // Validate credentials
+            if (username === ADMIN_CREDENTIALS.username && password === ADMIN_CREDENTIALS.password) {
+                // Store login session
+                const sessionData = {
+                    username: username,
+                    loginTime: new Date().toISOString(),
+                    remember: remember
+                };
+
+                if (remember) {
+                    localStorage.setItem('adminSession', JSON.stringify(sessionData));
+                } else {
+                    sessionStorage.setItem('adminSession', JSON.stringify(sessionData));
+                }
+
+                showAlert('Login successful! Redirecting...', 'success');
+                
+                // Redirect to dashboard
+                setTimeout(() => {
+                    window.location.href = 'admin-dashboard.html';
+                }, 1000);
+            } else {
+                showAlert('Invalid username or password. Please try again.', 'error');
+            }
+        }
+
+        // Check if already logged in
+        window.addEventListener('load', () => {
+            const session = localStorage.getItem('adminSession') || sessionStorage.getItem('adminSession');
+            if (session) {
+                window.location.href = 'admin-dashboard.html';
+            }
+        });
+    </script>
+</body>
+</html>
